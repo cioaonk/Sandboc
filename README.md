@@ -4,8 +4,9 @@ At this point the final hint will be released with 30 minutes remaining in the C
 Those who succesfully solve this challenge will have their names added to this file. 
 Until then, idk try harder or something.``
 ------
-------
-------
+tj
+Jacob
+Aaron
 ------
 ------
 ------
