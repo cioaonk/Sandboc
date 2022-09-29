@@ -7,3 +7,4 @@ Once the script is run, it will asks the user for a target IP Address
 ```
 Enter your target IP
 ```
+If an IP is incorrectly entered, the script will continue to prompt for an accurate IP address.
