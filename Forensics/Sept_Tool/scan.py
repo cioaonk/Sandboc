@@ -6,18 +6,18 @@ regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-
 invalid = True
 path = ''
 
-
+# checks for operating system type
 if os.name == 'nt':
-   path = "C:/nmap_scans"
+   path = "C:\\nmap_scans"
 else:
-   path = '~/nmap_scans'
+   path = '/nmap_scans'
 
+# checks for \nmap_scans directory; crreates the directory if it does not exist
 exists = os.path.exists(path)
-
 if exists == False:
    os.mkdir(path)
 
-
+# check for valid IPv4 address
 def check(ip):
    if(re.search(regex, ip)):
       # valid IP address (invalid = False)
@@ -52,10 +52,13 @@ elif fl=="4":
    fl = "-sS"
    
 ts = str(time.time())
+fileName = "scan_" + ts + ".txt"
 
-crafted_scan = "nmap {} {} -oN {}".format(fl, ip, path + "/scan_" + ts + ".txt")
+crafted_scan = "nmap {} {} -oN {}".format(fl, ip, path + "/" + fileName)
 
-print("Executing scan", crafted_scan)
+print("Executing scan: ", crafted_scan)
+print("\nScan stored at " + path + "\n")
 
 time.sleep(3)
+
 os.system(crafted_scan)
