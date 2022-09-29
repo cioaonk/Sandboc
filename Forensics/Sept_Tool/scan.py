@@ -10,7 +10,7 @@ path = ''
 if os.name == 'nt':
    path = "C:/nmap_scans"
 else:
-   path = '../nmap_scans'
+   path = '~/nmap_scans'
 
 exists = os.path.exists(path)
 
