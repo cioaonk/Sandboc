@@ -56,12 +56,8 @@ fileName = "scan_" + ts + ".txt"
 
 crafted_scan = "nmap {} {} -oN {}".format(fl, ip, path + "/" + fileName)
 
-<<<<<<< HEAD
 print("Executing scan: ", crafted_scan)
-=======
-print("Executing scan", crafted_scan)
 print("\nScan stored at C:\\nmap_scans\\" + fileName + "\n")
->>>>>>> e17a52f1818b7ecd6ddba79fb44046a87dd93b7b
 
 time.sleep(3)
 
