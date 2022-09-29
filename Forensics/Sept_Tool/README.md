@@ -27,11 +27,11 @@ Enter a number, 1-4
 ```
 If an invalid input is given (numbers outside of 1-4, or anything else), the script will loop and continue to prompt for a valid input.
 
-Once an option is selected, the script will output a notification that the scan has executed, the actualy nmap command, and the filepath that the scan is stored at.
+Once an option is selected, the script will output a notification that the scan has executed, and the actual nmap command that is run, with the user input included. The script will then output a notification that outputs the path to the directory where the scans are stored.
 
 ```
 Executing scan: nmap [FLAGS] [IPADDRESS] -oN [FILEPATH]
 Scan stored at /nmap_scans
 ```
 
-The script then records the nmap scan to the indicated file.
+The script then executes the scan and records the nmap scan to the indicated file.
