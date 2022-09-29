@@ -34,15 +34,23 @@ while invalid:
 print("Which of the following scans would you like to perform:")
 print("1. OS fingerprinting scan: -O")
 print("2. Aggressive Scan: -A")
-fl = input("1 or 2 \n")
+print("3. UDP Scan only: -sU")
+print("4. TCP SYN Stealth Scan: -sS")
+
+fl = input("Enter a number, 1-4 \n")
 # Verify input
-while fl != "1" and fl != "2":
-   fl = input("Please Enter valid input: 1 or 2 \n")
+while fl != "1" and fl != "2" and fl != "3" and fl !="4":
+   fl = input("Please enter valid input: \n")
 # scan options
 if fl == "1":
    fl = "-O"
-else:
+elif fl=="2":
    fl = "-A"
+elif fl=="3":
+   fl = "-sU"
+elif fl=="4":
+   fl = "-sS"
+   
 ts = str(time.time())
 
 crafted_scan = "nmap {} {} -oN {}".format(fl, ip, path + "/scan_" + ts + ".txt")
