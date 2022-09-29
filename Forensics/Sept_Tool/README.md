@@ -7,4 +7,31 @@ Once the script is run, it will asks the user for a target IP Address
 ```
 Enter your target IP
 ```
-If an IP is incorrectly entered, the script will continue to prompt for an accurate IP address.
+If an IP is incorrectly entered, the script will loop and continue to prompt for an accurate IP address.
+```
+Invalid IP Address
+Enter your target IP
+```
+
+Once a valid IP address is given, the script will prompt for a scan type, and its corresponding flags.
+```
+Which of the following scans would you like to perform?
+1. OS fingerprinting scan: -O
+2. Aggressive Scan: -A
+3. UDP Scan only: -sU
+4. TCP SYN Stealth Scan: -sS
+```
+The script will then prompt the user to enter a number
+```
+Enter a number, 1-4
+```
+If an invalid input is given (numbers outside of 1-4, or anything else), the script will loop and continue to prompt for a valid input.
+
+Once an option is selected, the script will output a notification that the scan has executed, and the file that the scan is being saved to.
+
+```
+Executing scan
+~/nmap_scans/scan_{TIMESTAMP}.txt
+```
+
+The script then records the nmap scan to the indicated file.
