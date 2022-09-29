@@ -7,7 +7,7 @@ Once the script is run, it will asks the user for a target IP Address
 ```
 Enter your target IP
 ```
-If an IP is incorrectly entered, the script will loop and continue to prompt for an accurate IP address.
+If an invalid IP address is entered, the script will loop and continue to prompt for an accurate IP address.
 ```
 Invalid IP Address
 Enter your target IP
@@ -27,11 +27,11 @@ Enter a number, 1-4
 ```
 If an invalid input is given (numbers outside of 1-4, or anything else), the script will loop and continue to prompt for a valid input.
 
-Once an option is selected, the script will output a notification that the scan has executed, and the file that the scan is being saved to.
+Once an option is selected, the script will output a notification that the scan has executed, the actualy nmap command, and the filepath that the scan is stored at.
 
 ```
-Executing scan
-~/nmap_scans/scan_{TIMESTAMP}.txt
+Executing scan: nmap [FLAGS] [IPADDRESS] -oN [FILEPATH]
+Scan stored at /nmap_scans
 ```
 
 The script then records the nmap scan to the indicated file.
