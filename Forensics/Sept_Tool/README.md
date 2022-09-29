@@ -5,5 +5,5 @@
 Once the script is run, it will asks the user for a target IP Address
 
 ```
-Enter your targer IP
+Enter your target IP
 ```
