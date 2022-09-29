@@ -8,9 +8,9 @@ path = ''
 
 
 if os.name == 'nt':
-   path = "C:/nmap_scans"
+   path = "/nmap_scans"
 else:
-   path = '~/nmap_scans'
+   path = '/nmap_scans'
 
 exists = os.path.exists(path)
 
@@ -55,7 +55,7 @@ ts = str(time.time())
 
 crafted_scan = "nmap {} {} -oN {}".format(fl, ip, path + "/scan_" + ts + ".txt")
 
-print("Executing scan", crafted_scan)
+print("Executing scan: ", crafted_scan)
 
 time.sleep(3)
 os.system(crafted_scan)
