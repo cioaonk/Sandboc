@@ -8,7 +8,7 @@ path = ''
 
 # checks for operating system type
 if os.name == 'nt':
-   path = "/nmap_scans"
+   path = "C:\\nmap_scans"
 else:
    path = '/nmap_scans'
 
@@ -57,7 +57,7 @@ fileName = "scan_" + ts + ".txt"
 crafted_scan = "nmap {} {} -oN {}".format(fl, ip, path + "/" + fileName)
 
 print("Executing scan: ", crafted_scan)
-print("\nScan stored at C:\\nmap_scans\\" + fileName + "\n")
+print("\nScan stored at " + path + "\n")
 
 time.sleep(3)
 
