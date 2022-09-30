@@ -1,7 +1,12 @@
 # NMAP Scans with SCAN.PY 
 
-### This script is a framework made for users that need to perform an NMAP scan but do not have knowledge or experience in using the command line very much. It provides prompts and questions to help craft an NMAP scan that will work for the user. The results are also saved in a local directory.
+###Purpose
 
+This script is a framework made for users that need to perform an NMAP scan but do not have knowledge or experience in using the command line very much. It provides prompts and questions to help craft an NMAP scan that will work for the user. The results are also saved in a local directory, as shown below.
+![image](Screenshot (58).png "Scans folder in root folder")
+![image](Screenshot (59).png "Scan files in nmap_scans")
+
+###Script Walkthrough
 Once the script is run, it will asks the user for a target IP Address
 
 ```
